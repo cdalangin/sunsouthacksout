@@ -49,6 +49,80 @@ h1{
   width: auto;
 }
 
+
+.four{
+background-color: var(--darkbg);
+height: 100vh;
+}
+
+.card {
+  background: #fff;
+  display: inline-block;
+  height: 100%;
+  width: 25%;
+  position: relative;
+  transition-duration: 300ms;
+  z-index: 0;
+}
+.card:hover{
+  width: 30%;
+  z-index: 1;
+}
+#sour{
+  background-image:  linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(https://www.simplyrecipes.com/wp-content/uploads/2019/09/Whiskey-Sour-LEAD-4.jpg);
+  /* background-attachment: fixed; */
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+#old{
+  background-image: linear-gradient(to right,rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(https://www.simplyrecipes.com/wp-content/uploads/2020/01/Old-Fashioned-Cocktail-LEAD-1.jpg);
+  /* background-attachment: fixed; */
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+#fizz{
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(https://www.acouplecooks.com/wp-content/uploads/2020/03/Southside-Fizz-001.jpg);
+  /* background-attachment: fixed; */
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+#three{
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(https://www.homemadefoodjunkie.com/wp-content/uploads/2020/01/Bacardi-Cocktail-on-table-735x734.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+.borderLeftRight {
+  display: inline-block;
+  position: relative;
+  color: white;
+  top: 75vh;
+  left: 10%;
+  font-size: 5em;
+  font-weight: 500;
+}
+
+.borderLeftRight::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 5px;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  transform-origin: bottom right;
+  transition: transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+.borderLeftRight:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
 .button {
   text-align: center;
   text-transform: uppercase;
