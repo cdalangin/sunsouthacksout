@@ -1,21 +1,37 @@
 import React from 'react';
-import heroimg from './assets/hero.jpg'
 import './App.css';
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import FourChoices from './FourChoices'
+import Main from './Main'
+import Fizz from './Fizz';
+import Sours from './Sours';
+import Old from './Old';
+import Three from './Three';
 
 function App() {
   return (
-    <div className="hero">
-      <div className="myrow">
-        <img className="heroImg" src={heroimg} />
-        <div className="mycolumn" style={{textAlign: "left"}}>
-          <h1>Mixologist</h1>
-          <h2>The best drink suggesting web app. Mixologist lets you pick what type of drink you want, whether you want the drink to have alcohol or not, and suggests drinks based on the ingredients you have.</h2>
-          <button className="button circle">
-           Lets go!
-          </button>
-        </div>
-      </div>
-    </div>
+    <Switch>
+      <Route path='/Fizz'>
+        <Fizz />
+      </Route>
+      <Route path='/Sours'>
+        <Sours />
+      </Route>
+      <Route path='/Old'>
+        <Old />
+      </Route>
+      <Route path='/Three'>
+        <Three />
+      </Route>
+      <Route path='/FourChoices'>
+        <FourChoices />
+      </Route>
+      <Route path='/'>
+        <Main />
+      </Route>
+
+    </Switch>
+
   );
 }
 

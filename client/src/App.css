@@ -49,6 +49,80 @@ h1{
   width: auto;
 }
 
+
+.four{
+background-color: var(--darkbg);
+height: 100vh;
+}
+
+.card {
+  background: #fff;
+  display: inline-block;
+  height: 100%;
+  width: 25%;
+  position: relative;
+  transition-duration: 300ms;
+  z-index: 0;
+}
+.card:hover{
+  width: 30%;
+  z-index: 1;
+}
+#sour{
+  background-image:  linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(https://www.simplyrecipes.com/wp-content/uploads/2019/09/Whiskey-Sour-LEAD-4.jpg);
+  /* background-attachment: fixed; */
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+#old{
+  background-image: linear-gradient(to right,rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(https://www.simplyrecipes.com/wp-content/uploads/2020/01/Old-Fashioned-Cocktail-LEAD-1.jpg);
+  /* background-attachment: fixed; */
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+#fizz{
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(https://www.acouplecooks.com/wp-content/uploads/2020/03/Southside-Fizz-001.jpg);
+  /* background-attachment: fixed; */
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+#three{
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(https://www.homemadefoodjunkie.com/wp-content/uploads/2020/01/Bacardi-Cocktail-on-table-735x734.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+.borderLeftRight {
+  display: inline-block;
+  position: relative;
+  color: white;
+  top: 75vh;
+  left: 10%;
+  font-size: 5em;
+  font-weight: 500;
+}
+
+.borderLeftRight::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 5px;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  transform-origin: bottom right;
+  transition: transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+.borderLeftRight:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
 .button {
   text-align: center;
   text-transform: uppercase;
@@ -97,3 +171,106 @@ h1{
   background: #3e70aa;
   padding: -2px;
 }
+
+/* 4 Categories Pages */
+
+.row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.col{
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1.5em;
+}
+
+.graphic{
+padding: .5em;
+width: 65vh;
+}
+
+.category {
+  font-size: 3em;
+  font-weight: 500;
+  text-align: center;
+  color: var(--secondary);  
+}
+
+.question {
+  font-size: 2em;
+  font-weight: 500;
+  text-align: center;
+  color: var(--secondary);
+}
+
+.choices {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  padding: 3px;
+}
+
+.enter {
+  display: flex;
+  justify-self: flex-end;
+}
+
+/* Buttons */
+
+.options {
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 20px;
+  margin-top: -5px;
+  font-weight: 100;
+  font-family: "Segoe UI";
+  letter-spacing: 1px;
+}
+.options:before {
+  border-radius: 100px;
+  border: 2px solid #468cdc;
+  box-shadow: 0 0 15px rgba(0, 255, 204, 0.15), 0 0 15px rgba(0, 255, 204, 0.15) inset;
+  content: "";
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  height: 80px;
+  width: 150px;
+  margin-left: -77px;
+  margin-top: -42px;
+  opacity: 1;
+  transform: scale(1);
+  transition: all 300ms;
+}
+.options:hover:before {
+  transform: scale(1.05);
+}
+.options.border {
+  background: #23466e;
+  border: none;
+  border-radius: 900px;
+  color: #e4ecfa;
+  cursor: pointer;
+  display: block;
+  width: 140px;
+  height: 70px;
+  line-height: 70px;
+  position: relative;
+  margin: auto;
+  margin-top: 25px;
+  transition: 0.5s;
+  padding-bottom: 10px;
+}
+.options.border:hover {
+  background: #3e70aa;
+  padding: -2px;
+}
+
