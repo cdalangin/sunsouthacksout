@@ -3,7 +3,6 @@ var express = require('express');
 var app = express();
 var bodyParser = require("body-parser");
 var mongoose = require('mongoose');
-// var uri = "mongodb+srv://admin:admin@cocktaildb.scif7.mongodb.net/cocktails?retryWrites=true&w=majority";
 var path = require('path');
 var indexRouter = require('./routes/index');
 
