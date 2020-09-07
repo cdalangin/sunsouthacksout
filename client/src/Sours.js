@@ -13,11 +13,11 @@ function Sours() {
             <div className="col right">
                 <h2 className="question">Which ingredients do you want to use?</h2>
                 <div className="choices">
-                    <button className="options border">Lemon</button>
-                    <button className="options border">Lime</button>
-                    <button className="options border">Orange Liqueur</button>
-                    <button className="options border">Egg White</button>
-                    <button className="options border">Other</button>
+                    <button value="lemon" className="options border">Lemon</button>
+                    <button value="lime" className="options border">Lime</button>
+                    <button value="orange" className="options border" style={{ fontSize: 14 }}>Orange Liqueur</button>
+                    <button value="egg" className="options border">Egg White</button>
+                    <button value="grapefruit" className="options border">Grapefruit</button>
                 </div>
 
             </div>

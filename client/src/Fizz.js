@@ -13,11 +13,11 @@ function Fizz() {
             <div className="col right">
                 <h2 className="question">Which ingredients do you want to use?</h2>
                 <div className="choices">
-                    <button className="options border">Lemon</button>
-                    <button className="options border">Soda</button>
-                    <button className="options border">Grapefruit</button>
-                    <button className="options border">Cucumber</button>
-                    <button className="options border">Mint</button>
+                    <button value="lemon" className="options border">Lemon</button>
+                    <button value="pineapple" className="options border">Pineapple</button>
+                    <button value="grapefruit" className="options border">Grapefruit</button>
+                    <button value="cucumber" className="options border">Cucumber</button>
+                    <button value="mint" className="options border">Mint</button>
                 </div>
             </div>
         </div>

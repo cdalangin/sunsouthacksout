@@ -13,11 +13,11 @@ function Three() {
             <div className="col right">
                 <h2 className="question">Which ingredients do you want to use?</h2>
                 <div className="choices">
-                    <button className="options border">Watermelon</button>
-                    <button className="options border">Mango</button>
-                    <button className="options border">Pineapple</button>
-                    <button className="options border">Cream</button>
-                    <button className="options border">Raspberry</button>
+                    <button value="watermelon" className="options border">Watermelon</button>
+                    <button value="mango" className="options border">Mango</button>
+                    <button value="pineapple" className="options border">Pineapple</button>
+                    <button value="cream" className="options border">Cream</button>
+                    <button value="raspberry" className="options border">Raspberry</button>
                 </div>
 
             </div>

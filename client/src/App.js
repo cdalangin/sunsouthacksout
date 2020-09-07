@@ -7,10 +7,14 @@ import Fizz from './Fizz';
 import Sours from './Sours';
 import Old from './Old';
 import Three from './Three';
+import Alcohol from './Alcohol';
 
 function App() {
   return (
     <Switch>
+      <Route path='/Alcohol'>
+        <Alcohol />
+      </Route>
       <Route path='/Fizz'>
         <Fizz />
       </Route>

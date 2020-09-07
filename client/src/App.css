@@ -12,6 +12,10 @@
   padding: 0em 10em 0em 0em;
 }
 
+a {
+  text-decoration: none;
+}
+
 h1, h2, h3, h4, h5, h6, p, span, a{
   font-family: 'Raleway', sans-serif;
 }
@@ -176,9 +180,11 @@ height: 100vh;
 
 .row {
   display: flex;
+  background-color: var(--lightbg);
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  height: 100vh;
 }
 
 .col{
@@ -188,6 +194,10 @@ height: 100vh;
   justify-content: space-around;
   align-items: center;
   padding: 1.5em;
+}
+
+.right {
+  padding-right: 100px;
 }
 
 .graphic{
@@ -274,3 +284,26 @@ width: 65vh;
   padding: -2px;
 }
 
+/* Alcohol Page */
+
+.cocktails {
+  /* background-image: url(https://img.thedailybeast.com/image/upload/c_crop,d_placeholder_euli9k,h_1440,w_2560,x_0,y_0/dpr_2.0/c_limit,w_740/fl_lossy,q_auto/v1517521303/180131-wondrich-bad-cocktail-tease_wghhv8); */
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding-top: 40px;
+  background-color: var(--lightbg);
+}
+
+.twoOptions {
+  height: 400px;
+  align-self: center;
+}
+
+.or {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

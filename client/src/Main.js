@@ -14,7 +14,7 @@ function Main() {
           <h1>Mixologist</h1>
           <h2>The best drink suggesting web app. Mixologist lets you pick what type of drink you want, whether you want the drink to have alcohol or not, and suggests drinks based on the ingredients you have.</h2>
           <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center', width: '100%' }}>
-            <a href="/FourChoices"><button className="button circle">
+            <a href="/Alcohol"><button className="button circle">
               Lets go!
           </button></a></div>
         </div>
