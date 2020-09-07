@@ -1,28 +1,47 @@
-import React from "react";
+import React, { Component } from "react";
+import axios from "axios";
 import './App.css';
 import drink3 from "./assets/drink3.png"
 
-
-function Three() {
-    return (
-        <div className="row">
-            <div className="col left">
-                <img className="graphic" src={drink3} />
-                <h1 className="category">Blended</h1>
-            </div>
-            <div className="col right">
-                <h2 className="question">Which ingredients do you want to use?</h2>
-                <div className="choices">
-                    <button value="watermelon" className="options border">Watermelon</button>
-                    <button value="mango" className="options border">Mango</button>
-                    <button value="pineapple" className="options border">Pineapple</button>
-                    <button value="cream" className="options border">Cream</button>
-                    <button value="raspberry" className="options border">Raspberry</button>
+export default class Three extends Component {
+    constructor() {
+        super();
+        this.state = {
+            ingredients: ""
+        }
+    }
+    componentDidMount = () => {
+        axios.get('/Three/Alcoholic')
+            .then(response => {
+                // handle success
+                this.setState({
+                    ingredients: response.data
+                })
+            })
+            .catch(error => {
+                // handle error
+                console.log(error);
+            });
+    }
+    render() {
+        return (
+            <div className="row">
+                <div className="col left">
+                    <img className="graphic" src={drink3} />
+                    <h1 className="category">Blended</h1>
                 </div>
+                <div className="col right">
+                    <h2 className="question">Which ingredients do you want to use?</h2>
+                    <div className="choices">
+                        <button className="options border">{this.state.ingredients.ingredient1}</button>
+                        <button className="options border">{this.state.ingredients.ingredient2}</button>
+                        <button className="options border">{this.state.ingredients.ingredient3}</button>
+                        <button className="options border">{this.state.ingredients.ingredient4}</button>
+                        <button className="options border">{this.state.ingredients.ingredient5}</button>
+                    </div>
 
+                </div>
             </div>
-        </div>
-    )
+        )
+    }
 }
-
-export default Three;

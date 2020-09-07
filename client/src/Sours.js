@@ -1,28 +1,49 @@
-import React from "react";
+import React, { Component } from "react";
+import axios from "axios";
 import './App.css';
 import drink5 from "./assets/drink5.png"
 
+export default class Sours extends Component {
+    constructor() {
+        super();
+        this.state = {
+            ingredients: ""
+        };
+    }
 
-function Sours() {
-    return (
-        <div className="row">
-            <div className="col left">
-                <img className="graphic" src={drink5} />
-                <h1 className="category">Sours</h1>
-            </div>
-            <div className="col right">
-                <h2 className="question">Which ingredients do you want to use?</h2>
-                <div className="choices">
-                    <button value="lemon" className="options border">Lemon</button>
-                    <button value="lime" className="options border">Lime</button>
-                    <button value="orange" className="options border" style={{ fontSize: 14 }}>Orange Liqueur</button>
-                    <button value="egg" className="options border">Egg White</button>
-                    <button value="grapefruit" className="options border">Grapefruit</button>
+    componentDidMount = () => {
+        axios.get('/Sours/Alcoholic')
+            .then(response => {
+                // handle success
+                this.setState({
+                    ingredients: response.data
+                })
+            })
+            .catch(error => {
+                // handle error
+                console.log(error);
+            });
+    };
+
+    render() {
+        return (
+            <div className="row">
+                <div className="col left">
+                    <img className="graphic" src={drink5} />
+                    <h1 className="category">Sours</h1>
                 </div>
+                <div className="col right">
+                    <h2 className="question">Which ingredients do you want to use?</h2>
+                    <div className="choices">
+                        <button className="options border">{this.state.ingredients.ingredient1}</button>
+                        <button className="options border">{this.state.ingredients.ingredient2}</button>
+                        <button className="options border">{this.state.ingredients.ingredient3}</button>
+                        <button className="options border">{this.state.ingredients.ingredient4}</button>
+                        <button className="options border">{this.state.ingredients.ingredient5}</button>
+                    </div>
 
+                </div>
             </div>
-        </div>
-    )
+        )
+    }
 }
-
-export default Sours;
