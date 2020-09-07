@@ -11,7 +11,10 @@ export default class Old extends Component {
         }
     }
     componentDidMount = () => {
-        axios.get('/Old-fashioned/Alcoholic')
+        let search = window.location.search;
+        let params = new URLSearchParams(search);
+        let aparam = params.get('a');
+        axios.get(`/Old-fashioned/${aparam}`)
             .then(response => {
                 // handle success
                 this.setState({

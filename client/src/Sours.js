@@ -1,7 +1,9 @@
 import React, { Component } from "react";
+import Reactrouter from "react-router-dom";
 import axios from "axios";
 import './App.css';
 import drink5 from "./assets/drink5.png"
+import { useLocation } from "react-router-dom";
 
 export default class Sours extends Component {
     constructor() {
@@ -12,7 +14,10 @@ export default class Sours extends Component {
     }
 
     componentDidMount = () => {
-        axios.get('/Sours/Alcoholic')
+        let search = window.location.search;
+        let params = new URLSearchParams(search);
+        let aparam = params.get('a');
+        axios.get(`/Sours/${aparam}`)
             .then(response => {
                 // handle success
                 this.setState({

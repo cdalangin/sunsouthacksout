@@ -11,7 +11,10 @@ export default class Fizz extends Component {
         }
     }
     componentDidMount = () => {
-        axios.get('/Collins/Alcoholic')
+        let search = window.location.search;
+        let params = new URLSearchParams(search);
+        let aparam = params.get('a');
+        axios.get(`/Collins/${aparam}`)
             .then(response => {
                 // handle success
                 this.setState({

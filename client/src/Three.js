@@ -11,7 +11,10 @@ export default class Three extends Component {
         }
     }
     componentDidMount = () => {
-        axios.get('/Three/Alcoholic')
+        let search = window.location.search;
+        let params = new URLSearchParams(search);
+        let aparam = params.get('a');
+        axios.get(`/Three/${aparam}`)
             .then(response => {
                 // handle success
                 this.setState({
